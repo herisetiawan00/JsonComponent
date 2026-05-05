@@ -8,7 +8,7 @@ public struct JsonComponent {
 
     static var shared: JsonComponent = .init()
 
-    static func register(
+    public static func register(
         _ id: String,
         _ builder: @escaping ComponentJsonBuilder
     ) throws {
@@ -28,12 +28,12 @@ public struct JsonComponent {
         shared.registeredState[key]?(state)
     }
 
-    static func clear() {
+    public static func clear() {
         shared.registeredJson = [:]
         shared.registeredState = [:]
     }
 
-    static func build(
+    public static func build(
         _ json: ComponentJson,
         cContext: ComponentContext = [:]
     ) throws -> any View {
