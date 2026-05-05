@@ -1,7 +1,7 @@
 import Foundation
 
 extension String {
-    func withContext(_ cContext: ComponentContext, args: [Any] = []) -> String {
+    public func withContext(_ cContext: ComponentContext, args: [Any] = []) -> String {
         if self.hasPrefix("$") {
             let paths = self.dropFirst().components(separatedBy: ".")
             
