@@ -1,0 +1,15 @@
+{
+  "originHash" : "103f4c30f42d5783ce00032a077c5e1197a65cced47a8ede09fdfc1fc1d69635",
+  "pins" : [
+    {
+      "identity" : "jsoncomponent",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/herisetiawan00/JsonComponent.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "63959565282f585df42de4f0be6de8d722dabd55"
+      }
+    }
+  ],
+  "version" : 3
+}
