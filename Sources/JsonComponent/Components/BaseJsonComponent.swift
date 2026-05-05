@@ -1,7 +1,7 @@
 import SwiftUI
 
 public protocol BaseJsonComponent {
-    var id: String { get }
+    static var id: String { get }
     var key: String? { get }
     var state: ComponentState? { get set }
 
