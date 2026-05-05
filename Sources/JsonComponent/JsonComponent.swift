@@ -24,7 +24,7 @@ public struct JsonComponent {
         return shared.registeredJson.contains(where: { $0.key == id })
     }
 
-    static private func setState(_ key: String, _ state: ComponentState) {
+    public static func setState(_ key: String, _ state: ComponentState) {
         shared.registeredState[key]?(state)
     }
 
