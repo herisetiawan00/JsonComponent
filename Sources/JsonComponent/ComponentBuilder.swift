@@ -16,13 +16,14 @@ struct ComponentBuilder: View {
         self.component = component
         self.setState = setState
         self.onDispose = onDispose
-        self.state = [:]
 
-        component.initState()
         if let initialState = component.state {
-            state = initialState
+            self.state = initialState
+        } else {
+            self.state = [:]
         }
         self.setState?(updateState)
+        component.initState()
     }
 
     @State private var state: ComponentState
@@ -33,7 +34,7 @@ struct ComponentBuilder: View {
 
     var body: some View {
         return AnyView(
-            component.build(cContext)
+            component.build(cContext.merging(["state": state]) { $1 })
         )
         .onDisappear {
             onDispose?()
