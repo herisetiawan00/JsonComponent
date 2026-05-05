@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 public protocol BaseJsonComponent {
     static var id: String { get }
     var key: String? { get }
